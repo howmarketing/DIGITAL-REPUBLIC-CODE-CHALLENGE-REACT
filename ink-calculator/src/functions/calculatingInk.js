@@ -28,7 +28,7 @@ const CalculationInk = () => {
     }    
         const wallArea = document.createElement('h2');
         wallArea.innerText = `A área total a ser pintada é de ${ totalArea.toFixed(2) } m2 \n
-        e será necessário ${ (totalArea / liter).toFixed(2) } de tinta para pintar`;
+        e será necessário ${ (totalArea / liter).toFixed(2) } litros de tinta para pintar`;
         App.appendChild(wallArea);
 }
 
