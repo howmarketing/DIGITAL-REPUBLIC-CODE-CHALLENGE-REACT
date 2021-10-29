@@ -1,6 +1,7 @@
 import './App.css';
 import DivWall from './components/divWall';
 import Button from './components/button';
+import CalculationInk from './functions/calculatingInk';
 
 function App() {
   return (
@@ -23,7 +24,7 @@ function App() {
           <h3> Parede 4 </h3>
           <DivWall />
         </div>
-          <Button type='button' name='Calcular' />
+          <Button type='button' name='Calcular' action= { () => CalculationInk() } />
       </div>
     </>
   );
