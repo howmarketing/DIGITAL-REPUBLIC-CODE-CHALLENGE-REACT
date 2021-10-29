@@ -1,10 +1,10 @@
 import React from 'react';
 
 const Input = (props) => {
-    const { name } = props;
+    const { name, action } = props;
     return (
         <>
-            <input placeholder={ name } />
+            <input placeholder={ name } onChange={ action } />
         </>
     )
 };
