@@ -6,7 +6,7 @@ import CalculationInk from './functions/calculatingInk';
 function App() {
   return (
     <>
-        <h1> Calculo de Tinta</h1>
+      <h1> Calculo de Tinta</h1>
       <div className='App'>
         <div className='wallDiv'>
           <h3> Parede 1 </h3>
@@ -25,6 +25,8 @@ function App() {
           <DivWall />
         </div>
           <Button type='button' name='Calcular' action= { () => CalculationInk() } />
+      </div>
+      <div className='answer'>
       </div>
     </>
   );

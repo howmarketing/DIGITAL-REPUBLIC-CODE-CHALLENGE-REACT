@@ -21,6 +21,15 @@ input {
 }
 
 .wallInformation {
-  height: 500px;
+  height: 350px;
   width: 200px;
 };
+
+.answer {
+  text-align: center;
+  /* display: block; */
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  margin: auto;
+}

@@ -4,10 +4,18 @@ const windows = 2 * 1.2;
 const ShowingWallSize = (invalidMeasure, target) => {
     
     const fatherElement = target.parentNode;
-    const wallWidth = fatherElement.querySelector('#width');
-    const wallHeight = fatherElement.querySelector('#height');
-    const numberWindows = fatherElement.querySelector('#windows');
-    const numberDoors = fatherElement.querySelector('#doors');
+    let wallWidth = fatherElement.querySelector('#width').value;
+    if (!wallWidth) wallWidth = 0;
+    console.log(wallWidth);
+    let wallHeight = fatherElement.querySelector('#height').value;
+    if (!wallHeight) wallHeight = 0;
+    console.log(wallHeight);
+    let numberWindows = fatherElement.querySelector('#windows').value;
+    if (!numberWindows) numberWindows = 0;
+    console.log(numberWindows);
+    let numberDoors = fatherElement.querySelector('#doors').value;
+    if (!numberDoors) numberDoors = 0;
+    console.log(numberDoors);
     let uselessArea = parseFloat(numberDoors.value) * parseFloat(doors) + parseFloat(windows) * parseFloat(numberWindows.value);
     const totalArea = parseFloat(wallHeight.value) * parseFloat(wallWidth.value);
     if (uselessArea / totalArea >= 1/2) {
@@ -25,7 +33,7 @@ const ShowingWallSize = (invalidMeasure, target) => {
     if (wallHeight.value > 0 && wallWidth.value > 0 && invalidMeasure === false) {
         const wallArea = document.createElement('h2');
         wallArea.innerText = '';
-        wallArea.innerText = 'A área útil desta parede é de ' + (utilArea.toFixed(2)) + ' m2';
+        wallArea.innerText = 'A área útil desta parede é de ' + (utilArea.toFixed(2)) + ' m²';
         fatherElement.appendChild(wallArea);
     }
 }
