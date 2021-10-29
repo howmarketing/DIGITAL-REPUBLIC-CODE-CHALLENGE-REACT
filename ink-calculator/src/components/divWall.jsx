@@ -1,15 +1,18 @@
 import React from 'react';
-import Button from './components/button';
-import Input from './components/input';
+import Input from './input';
 
-const divWall = (props) => {
+const divWall = () => {
     return(
-        <>
+        <div className='wallInformation'>
+            <label> Altura da Parede </label>
             <Input />
+            <label> Largura da Parede </label>
             <Input />
+            <label> Número de Janelas </label>
             <Input />
-            <Button />
-        </>
+            <label> Número de Portas </label>
+            <Input />
+        </div>
     )
 };
 

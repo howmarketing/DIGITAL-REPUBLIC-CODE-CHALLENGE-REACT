@@ -1,17 +1,32 @@
 import './App.css';
-import divWall from './components/divWall';
-
+import DivWall from './components/divWall';
+import Button from './components/button';
 
 function App() {
   return (
-    <div className="App">
-      <div>
-        <divWall />
-        <divWall />
-        <divWall />
-        <divWall />
+    <>
+      <div className='App'>
+        <div className='wallDiv'>
+          <h3> Parede 1 </h3>
+          <DivWall />
+        </div>
+        <div className='wallDiv'>
+          <h3> Parede 2 </h3>
+          <DivWall />
+        </div>
+        <div className='wallDiv'>
+          <h3> Parede 3 </h3>
+          <DivWall />
+        </div>
+        <div className='wallDiv'>
+          <h3> Parede 4 </h3>
+          <DivWall />
+        </div>
       </div>
-    </div>
+      <div>
+          <Button />
+      </div>
+    </>
   );
 }
 
