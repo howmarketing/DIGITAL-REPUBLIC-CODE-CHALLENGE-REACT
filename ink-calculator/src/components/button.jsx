@@ -1,9 +1,11 @@
 import React from 'react';
+import './button.css'
 
 const Button = (props) => {
+    const {type, name } = props;
     return(
         <>
-            <button> { props.name} </button>
+            <button { ...type } > { name } </button>
         </>
     )
 };

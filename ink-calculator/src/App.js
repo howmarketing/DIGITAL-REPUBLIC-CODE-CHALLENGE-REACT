@@ -5,6 +5,7 @@ import Button from './components/button';
 function App() {
   return (
     <>
+        <h1> Calculo de Tinta</h1>
       <div className='App'>
         <div className='wallDiv'>
           <h3> Parede 1 </h3>
@@ -22,9 +23,7 @@ function App() {
           <h3> Parede 4 </h3>
           <DivWall />
         </div>
-      </div>
-      <div>
-          <Button />
+          <Button type='button' name='Calcular' />
       </div>
     </>
   );

@@ -1,9 +1,10 @@
 import React from 'react';
 
 const Input = (props) => {
+    const { name } = props;
     return (
         <>
-            <input type={ props.type } placeholder={ props.name } />
+            <input placeholder={ name } />
         </>
     )
 };
