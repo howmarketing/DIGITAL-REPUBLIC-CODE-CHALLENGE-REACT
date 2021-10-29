@@ -1,12 +1,16 @@
 import './App.css';
-import Button from './components/button';
-import Input from './components/input';
+import divWall from './components/divWall';
+
 
 function App() {
   return (
     <div className="App">
-      <Input />
-      <Button />
+      <div>
+        <divWall />
+        <divWall />
+        <divWall />
+        <divWall />
+      </div>
     </div>
   );
 }
