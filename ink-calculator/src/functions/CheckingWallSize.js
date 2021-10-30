@@ -1,6 +1,26 @@
 const doors = .8 * 1.9;
 const windows = 2 * 1.2;
 
+document.addEventListener("DOMContentLoaded", function(event) {
+    const wallMeasures = document.querySelectorAll('#width, #height');
+    const calculateButton = document.querySelector('#calculateButton');
+    console.log(calculateButton);
+    calculateButton.addEventListener('mouseover', function () {
+        wallMeasures.forEach((measure) => {
+            if ((measure.value).every === 'number') {
+                calculateButton.setAttribute('disabled', 'false');
+            } else {
+                calculateButton.setAttribute('disabled', 'true');
+                // window.alert('É necessário preencher a largura e altura de todas as paredes.')
+                return;
+            };
+    })
+  });
+  calculateButton.addEventListener('mouseout', function () {
+    calculateButton.setAttribute('disabled', 'false');
+})
+});
+
 const ShowingWallSize = (invalidMeasure, target) => {
     
     const fatherElement = target.parentNode;

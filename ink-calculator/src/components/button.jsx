@@ -2,10 +2,10 @@ import React from 'react';
 import './button.css'
 
 const Button = (props) => {
-    const {type, name, action } = props;
+    const {type, name, action, id } = props;
     return(
         <>
-            <button { ...type } onClick={ action } > { name } </button>
+            <button { ...type } onClick={ action } id= { id } > { name } </button>
         </>
     )
 };
