@@ -1,25 +1,47 @@
 const doors = .8 * 1.9;
 const windows = 2 * 1.2;
 
-document.addEventListener("DOMContentLoaded", function(event) {
-    const wallMeasures = document.querySelectorAll('#width, #height');
-    const calculateButton = document.querySelector('#calculateButton');
-    console.log(calculateButton);
-    calculateButton.addEventListener('mouseover', function () {
-        wallMeasures.forEach((measure) => {
-            if ((measure.value).every === 'number') {
-                calculateButton.setAttribute('disabled', 'false');
-            } else {
-                calculateButton.setAttribute('disabled', 'true');
-                // window.alert('É necessário preencher a largura e altura de todas as paredes.')
-                return;
-            };
-    })
-  });
-  calculateButton.addEventListener('mouseout', function () {
-    calculateButton.setAttribute('disabled', 'false');
-})
-});
+// document.addEventListener("DOMContentLoaded", function(event) {
+//     const calculateButton = document.querySelector('#calculateButton');
+    
+//     calculateButton.addEventListener('mouseout', function () {
+//         calculateButton.setAttribute('disabled', 'false');
+//     });
+//     calculateButton.addEventListener('mouseover', function () {
+//         const wallMeasures = document.querySelectorAll('#width, #height');
+//         console.log(wallMeasures);
+    
+//         let wallSizes = [];
+    
+//         for (let index = 0; index < wallMeasures.length; index += 1) {
+//             if ((wallMeasures[index]).value) {
+//                 const valueToSum = (wallMeasures[index]).value;
+//                 console.log(valueToSum);
+//                 wallSizes.push(valueToSum);
+//                 // calculateButton.setAttribute('disabled', 'false');
+//             } else {
+//                 calculateButton.setAttribute('disabled', 'true');
+//                 window.alert('É necessário preencher a largura e altura de todas as paredes.')
+//                 break;
+//             }
+//         }
+        // console.log(wallSizes);
+        // if ((wallMeasures.value).every === Number) {
+        // } else {
+        //     window.alert('É necessário preencher a largura e altura de todas as paredes.')
+        //     return;
+        // };
+    //     wallMeasures.forEach((measure) => {
+    //         if ((measure.value).every === 'number') {
+    //             calculateButton.setAttribute('disabled', 'false');
+    //         } else {
+    //             calculateButton.setAttribute('disabled', 'true');
+    //             // window.alert('É necessário preencher a largura e altura de todas as paredes.')
+    //             return;
+    //         };
+    // })
+//   });
+// });
 
 const ShowingWallSize = (invalidMeasure, target) => {
     
@@ -72,6 +94,7 @@ const CheckingDoors = (e) => {
 }
 
 const CheckingWallSize = (e) => {
+    console.log('teste checkingWallSize')
     const target = e.target;
     const targetValue = parseFloat(target.value);
     let invalidMeasure = false;
@@ -82,4 +105,4 @@ const CheckingWallSize = (e) => {
     ShowingWallSize(invalidMeasure, target);
 };
 
-export { CheckingWallSize, CheckingDoors };
+export { CheckingWallSize, CheckingDoors, ShowingWallSize };

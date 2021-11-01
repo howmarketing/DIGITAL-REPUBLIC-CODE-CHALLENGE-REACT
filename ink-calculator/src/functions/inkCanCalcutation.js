@@ -20,7 +20,7 @@ const InkCanCalculation = (totalArea) => {
         rest = rest % bigCan;
         mediumCans = parseInt( rest / mediumCan );
         rest = rest % mediumCan;
-        smallCans = Math.ceil(parseInt( rest / smallCan ));
+        smallCans = Math.ceil( rest / smallCan );
         console.log(gallons, bigCans, mediumCans, smallCans);
         return [gallons, bigCans, mediumCans, smallCans, litersNeeded];
 
@@ -29,14 +29,14 @@ const InkCanCalculation = (totalArea) => {
         rest = rest % bigCan;
         mediumCans = parseInt( rest / mediumCan );
         rest = rest % mediumCan;
-        smallCans = Math.ceil(parseInt( rest / smallCan ));
+        smallCans = Math.ceil( rest / smallCan );
         console.log(bigCans, mediumCans, smallCans);
         return [bigCans, mediumCans, smallCans, litersNeeded];
 
     } else if (litersNeeded >= mediumCan) {
         mediumCans = parseInt( litersNeeded / mediumCan );
         rest = rest % mediumCan;
-        smallCans = Math.ceil(parseInt( rest / smallCan ));
+        smallCans = Math.ceil( rest / smallCan );
         console.log(mediumCans, smallCans);
         return [mediumCans, smallCans, litersNeeded];
 
